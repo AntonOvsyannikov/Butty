@@ -1,0 +1,10 @@
+.*
+!.gitignore
+!.readthedocs.yaml
+!.github
+*.py[cod]
+__pycache__/
+*.so
+*.egg-info/
+dist/
+build/

@@ -1,0 +1,44 @@
+[tool.poetry]
+name = "butty"
+version = "1.0.0"
+description = "Lightweight fully typed ODM (Object-Document Mapper) for MongoDB"
+authors = ["aovsyannikov <anton.ovsyannikov@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+homepage = "https://github.com/AntonOvsyannikov/Butty"
+repository = "https://github.com/AntonOvsyannikov/Butty"
+documentation = "https://butty.readthedocs.io/"
+
+
+[tool.poetry.dependencies]
+python = "^3.10"
+motor = "^3.7.1"
+pydantic = "<3"
+typing-inspect = "^0.9.0"
+
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.3.5"
+pytest-asyncio = "^0.26.0"
+mypy = "^1.15.0"
+tox = "^4.26.0"
+ruff = "^0.12.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+asyncio_default_fixture_loop_scope = "function"
+
+[tool.ruff]
+line-length = 120
+
+[tool.ruff.lint]
+select = ["E", "F", "I"]
+ignore = ["E741"]
+
+[tool.mypy]
+strict = true
+
